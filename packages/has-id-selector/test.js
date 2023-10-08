@@ -8,7 +8,7 @@ var idSelectors = [
   '#bar:after',
   '[input="text"] #foo',
   'ul > li + li #baz',
-  'element#baz'
+  'element#baz',
 ]
 
 var otherSelectors = [
@@ -17,33 +17,33 @@ var otherSelectors = [
   '[input="text"]',
   'a:visisted',
   'li + li',
-  '[href="#anchor"]'
+  '[href="#anchor"]',
 ]
 
-  test('should return true if there is an id selector', t => {
-    idSelectors.forEach(function(idSelector) {
-      t.truthy(hasIdSelector(idSelector))
-    })
+test('should return true if there is an id selector', (t) => {
+  idSelectors.forEach(function (idSelector) {
+    t.truthy(hasIdSelector(idSelector))
   })
+})
 
-  test('should return false if there is no id selector', t => {
-    otherSelectors.forEach(function(otherSelector) {
-      t.truthy(!hasIdSelector(otherSelector))
-    })
+test('should return false if there is no id selector', (t) => {
+  otherSelectors.forEach(function (otherSelector) {
+    t.truthy(!hasIdSelector(otherSelector))
   })
+})
 
-  test('should return true if there is an id called bar', t => {
-    idSelectors
-      .filter(function(idSelector) {
-        return idSelector.indexOf('bar') >= 0
-      })
-      .forEach(function(idSelector) {
-        t.truthy(hasIdSelector(idSelector, 'bar'))
-      })
-  })
-
-  test('should return false if there is no id selector called bar', t => {
-    otherSelectors.forEach(function(otherSelector) {
-      t.truthy(!hasIdSelector(otherSelector, 'bar'))
+test('should return true if there is an id called bar', (t) => {
+  idSelectors
+    .filter(function (idSelector) {
+      return idSelector.indexOf('bar') >= 0
     })
+    .forEach(function (idSelector) {
+      t.truthy(hasIdSelector(idSelector, 'bar'))
+    })
+})
+
+test('should return false if there is no id selector called bar', (t) => {
+  otherSelectors.forEach(function (otherSelector) {
+    t.truthy(!hasIdSelector(otherSelector, 'bar'))
   })
+})

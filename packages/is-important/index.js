@@ -1,4 +1,4 @@
-module.exports = value => {
+module.exports = (value) => {
   if (typeof value !== 'string') {
     throw new TypeError('is-important expected a string')
   }

@@ -1,6 +1,6 @@
 const vendorPrefixes = require('vendor-prefixes')
 
-module.exports = property => {
+module.exports = (property) => {
   if (typeof property !== 'string') {
     throw new TypeError('is-vendor-prefixed expected a string')
   }

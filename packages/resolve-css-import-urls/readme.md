@@ -5,17 +5,17 @@ Parse css import statements (`@import url(bar.css)`) in a string and return the 
 Support for the following `@import` [syntax](https://developer.mozilla.org/en-US/docs/Web/CSS/@import):
 
 ```css
-@import url("fineprint.css") print;
+@import url('fineprint.css') print;
 @import 'custom.css' projection;
-@import "custom.css";
+@import 'custom.css';
 ```
 
 TODO: Support the following
 
 ```css
-@import "common.css" screen, projection;
-@import url('landscape.css') screen and (orientation:landscape);
-@import url("bluish.css") projection, tv;
+@import 'common.css' screen, projection;
+@import url('landscape.css') screen and (orientation: landscape);
+@import url('bluish.css') projection, tv;
 ```
 
 ## Installation
@@ -29,10 +29,13 @@ npm i --save resolve-css-import-urls
 ```javascript
 const resolveCssImportUrls = require('resolve-css-import-urls')
 
-resolveCssImportUrls('http://example.com/css', 'url(foo.css); lksjhlksjhdf url(../bar.css);')
+resolveCssImportUrls(
+  'http://example.com/css',
+  'url(foo.css); lksjhlksjhdf url(../bar.css);'
+)
 // => ['http://example.com/css/foo.css', 'http://example.com/bar.css']
 
-resolveCssImportUrls("(foo.css); lksjhlksjhdf") // => []
+resolveCssImportUrls('(foo.css); lksjhlksjhdf') // => []
 ```
 
 ## License
@@ -49,6 +52,6 @@ MIT
 
 Crafted with <3 by [John Otander](http://johnotander.com).
 
-***
+---
 
 > This package was initially generated with [yeoman](http://yeoman.io) and the [p generator](https://github.com/johnotander/generator-p.git).

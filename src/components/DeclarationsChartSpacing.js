@@ -11,7 +11,7 @@ export default ({ data }) => {
     'padding-left',
     'padding-right',
     'padding-top',
-    'padding-bottom'
+    'padding-bottom',
     // 'margin',
     // 'margin-left',
     // 'margin-right',
@@ -23,8 +23,8 @@ export default ({ data }) => {
     properties.map((p, i) => ({ x: p, y: (data.properties[p] || []).length })),
     properties.map((p, i) => ({
       x: p,
-      y: uniq(data.properties[p] || []).length
-    }))
+      y: uniq(data.properties[p] || []).length,
+    })),
   ]
 
   return (

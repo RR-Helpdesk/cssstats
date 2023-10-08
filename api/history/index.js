@@ -9,7 +9,7 @@ const cssstats = require('cssstats')
 const cssbeautify = require('cssbeautify')
 const waybackCss = require('wayback-css')
 
-const isValidUrl = url => isPresent(url) && isUrl(url)
+const isValidUrl = (url) => isPresent(url) && isUrl(url)
 
 const stats = async (req, res) => {
   const url = getParam('url', req.url)
@@ -20,7 +20,7 @@ const stats = async (req, res) => {
   if (!isValidUrl(fullUrl) || !isPresent(date)) {
     return send(res, 406, {
       error: 'unacceptable',
-      message: 'Url is invalid'
+      message: 'Url is invalid',
     })
   }
 
@@ -29,7 +29,7 @@ const stats = async (req, res) => {
     const stats = cssstats(css.css, {
       specificityGraph: true,
       repeatedSelectors: true,
-      propertyResets: true
+      propertyResets: true,
     })
 
     css.css = cssbeautify(css.css)
@@ -39,7 +39,7 @@ const stats = async (req, res) => {
     send(res, 500, {
       error: 'server_error',
       message: 'Something went wrong',
-      stack: e
+      stack: e,
     })
   }
 }

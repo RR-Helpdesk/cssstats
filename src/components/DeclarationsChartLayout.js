@@ -20,15 +20,15 @@ export default ({ data }) => {
     'max-width',
     'min-width',
     'max-height',
-    'min-height'
+    'min-height',
   ]
 
   const formattedData = [
     properties.map((p, i) => ({ x: p, y: (data.properties[p] || []).length })),
     properties.map((p, i) => ({
       x: p,
-      y: uniq(data.properties[p] || []).length
-    }))
+      y: uniq(data.properties[p] || []).length,
+    })),
   ]
 
   return (
@@ -38,8 +38,8 @@ export default ({ data }) => {
         description={
           <span>
             Out of the <b>{total}</b> total declarations, <b>{unique}</b> have
-            unique values. The ratio of unique to total declarations is <b>
-            {uniqueToTotalRatio}</b>
+            unique values. The ratio of unique to total declarations is{' '}
+            <b>{uniqueToTotalRatio}</b>
           </span>
         }
       />

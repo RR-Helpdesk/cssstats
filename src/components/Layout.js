@@ -9,6 +9,7 @@ import { Logo, Link, Label, Input } from './ui'
 import favicon16 from '../images/favicon-16.png'
 import favicon32 from '../images/favicon-32.png'
 import favicon64 from '../images/favicon-64.png'
+import "../styles.css"
 
 export default ({ title, initialUrl, onUrlChange, children }) => {
   const [url, setUrl] = useState(initialUrl)
@@ -18,7 +19,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
     <div>
       <style>{`* { box-sizing: border-box; }`}</style>
       <Helmet
-        title={'CSS Stats'}
+        title={'REVREBEL CSS Stats'}
         meta={[
           {
             name: 'description',
@@ -48,7 +49,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
             p: [1, 2, 3],
             mb: 3,
             '& a': {
-              color: 'black',
+              color: 'primary',
               textDecoration: 'none',
             },
           }}
@@ -74,20 +75,21 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                 <span
                   sx={{
                     ml: 2,
-                    fontSize: 0,
+                    fontSize: 3,
+                    fontFamily: 'Khand',
                     display: ['none', 'block'],
                     textTransform: 'uppercase',
                     letterSpacing: '0.05em',
                     whiteSpace: 'nowrap',
                   }}
                 >
-                  CSS Stats
+                  RR CSS Stats
                 </span>
               </span>
             </Link>
 
             {initialUrl ? (
-              <div sx={{ px: 3, width: ['100%'] }}>
+              <div sx={{ px: 3, width: ['90%'] }}>
                 <form
                   onSubmit={(e) => {
                     e.preventDefault()
@@ -112,6 +114,7 @@ export default ({ title, initialUrl, onUrlChange, children }) => {
                 mr: 2,
                 width: 96,
                 display: 'flex',
+                color: "blue",
                 alignItems: 'center',
               }}
             >

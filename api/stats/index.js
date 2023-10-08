@@ -65,7 +65,7 @@ const stats = async (req, res) => {
       data.css = css
     }
 
-    send(res, 200, data) 
+    send(res, 200, data)
   } catch (e) {
     send(res, 500, {
       error: 'server_error',

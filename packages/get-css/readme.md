@@ -22,14 +22,14 @@ npm i -g get-css
 var getCss = require('get-css')
 
 var options = {
-  timeout: 5000
+  timeout: 5000,
 }
 
 getCss('http://github.com', options)
-  .then(function(response) {
+  .then(function (response) {
     console.log(response)
   })
-  .catch(function(error) {
+  .catch(function (error) {
     console.error(error)
   })
 ```

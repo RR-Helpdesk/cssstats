@@ -8,160 +8,160 @@ export default ({ properties }) => {
   const metrics = [
     {
       name: 'Display',
-      value: properties['display'] || []
+      value: properties['display'] || [],
     },
     {
       name: 'Float',
-      value: properties.float || []
+      value: properties.float || [],
     },
     {
       name: 'Width',
-      value: properties.width || []
+      value: properties.width || [],
     },
     {
       name: 'Height',
-      value: properties.height || []
+      value: properties.height || [],
     },
     {
       name: 'Max Width',
-      value: properties['max-width'] || []
+      value: properties['max-width'] || [],
     },
     {
       name: 'Min Width',
-      value: properties['min-width'] || []
+      value: properties['min-width'] || [],
     },
     {
       name: 'Max Height',
-      value: properties['max-height'] || []
+      value: properties['max-height'] || [],
     },
     {
       name: 'Min Height',
-      value: properties['min-height'] || []
-    }
+      value: properties['min-height'] || [],
+    },
   ]
 
   const spacingMetrics = [
     {
       name: 'Padding',
-      value: properties['padding'] || []
+      value: properties['padding'] || [],
     },
     {
       name: 'Padding Left',
-      value: properties['padding-left'] || []
+      value: properties['padding-left'] || [],
     },
     {
       name: 'Padding Right',
-      value: properties['padding-right'] || []
+      value: properties['padding-right'] || [],
     },
     {
       name: 'Padding Top',
-      value: properties['padding-top'] || []
+      value: properties['padding-top'] || [],
     },
     {
       name: 'Padding Bottom',
-      value: properties['padding-bottom'] || []
+      value: properties['padding-bottom'] || [],
     },
     {
       name: 'Margin',
-      value: properties['margin'] || []
+      value: properties['margin'] || [],
     },
     {
       name: 'Margin Left',
-      value: properties['margin-left'] || []
+      value: properties['margin-left'] || [],
     },
     {
       name: 'Margin Right',
-      value: properties['margin-right'] || []
+      value: properties['margin-right'] || [],
     },
     {
       name: 'Margin Top',
-      value: properties['margin-top'] || []
+      value: properties['margin-top'] || [],
     },
     {
       name: 'Margin Bottom',
-      value: properties['margin-bottom'] || []
-    }
+      value: properties['margin-bottom'] || [],
+    },
   ]
 
   const typographyMetrics = [
     {
       name: 'Font Family',
-      value: properties['font-family'] || []
+      value: properties['font-family'] || [],
     },
     {
       name: 'Font Size',
-      value: properties['font-size'] || []
+      value: properties['font-size'] || [],
     },
     {
       name: 'Font Weight',
-      value: properties['font-weight'] || []
+      value: properties['font-weight'] || [],
     },
     {
       name: 'Text Align',
-      value: properties['text-align'] || []
+      value: properties['text-align'] || [],
     },
     {
       name: 'Line Height',
-      value: properties['line-height'] || []
+      value: properties['line-height'] || [],
     },
     {
       name: 'Letter Spacing',
-      value: properties['letter-spacing'] || []
+      value: properties['letter-spacing'] || [],
     },
     {
       name: 'Text Decoration',
-      value: properties['text-decoration'] || []
+      value: properties['text-decoration'] || [],
     },
     {
       name: 'Text Transform',
-      value: properties['text-transform'] || []
+      value: properties['text-transform'] || [],
     },
     {
       name: 'Text Shadow',
-      value: properties['text-shadow'] || []
-    }
+      value: properties['text-shadow'] || [],
+    },
   ]
 
   const colorMetrics = [
     {
       name: 'Color',
-      value: properties.color || []
+      value: properties.color || [],
     },
     {
       name: 'Background Color',
-      value: properties['background-color'] || []
+      value: properties['background-color'] || [],
     },
     {
       name: 'Border Color',
-      value: properties['border-color'] || []
+      value: properties['border-color'] || [],
     },
     {
       name: 'Box Shadow',
-      value: properties['box-shadow'] || []
-    }
+      value: properties['box-shadow'] || [],
+    },
   ]
 
   const borderMetrics = [
     {
       name: 'Border',
-      value: properties['border'] || []
+      value: properties['border'] || [],
     },
     {
       name: 'Border Width',
-      value: properties['border-width'] || []
+      value: properties['border-width'] || [],
     },
     {
       name: 'Border Style',
-      value: properties['border-style'] || []
+      value: properties['border-style'] || [],
     },
     {
       name: 'Border Radius',
-      value: properties['border-radius'] || []
+      value: properties['border-radius'] || [],
     },
     {
       name: 'Box Shadow',
-      value: properties['box-shadow'] || []
-    }
+      value: properties['box-shadow'] || [],
+    },
   ]
 
   return (
@@ -185,7 +185,7 @@ export default ({ properties }) => {
           mb: 3,
           fontSize: 1,
           textTransform: 'uppercase',
-          letterSpacing: '0.05em'
+          letterSpacing: '0.05em',
         }}
       >
         Layout and Structure
@@ -194,7 +194,7 @@ export default ({ properties }) => {
         <Flex
           mt={0}
           wrap="wrap"
-          children={metrics.map(metric => (
+          children={metrics.map((metric) => (
             <Flex
               mb={3}
               key={metric.name}
@@ -215,7 +215,7 @@ export default ({ properties }) => {
           mb: 3,
           fontSize: 1,
           textTransform: 'uppercase',
-          letterSpacing: '0.05em'
+          letterSpacing: '0.05em',
         }}
       >
         Spacing
@@ -224,7 +224,7 @@ export default ({ properties }) => {
         mt={0}
         mb={4}
         wrap="wrap"
-        children={spacingMetrics.map(metric => (
+        children={spacingMetrics.map((metric) => (
           <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
             <SlabStat
               title={metric.name}
@@ -241,7 +241,7 @@ export default ({ properties }) => {
           mb: 3,
           fontSize: 1,
           textTransform: 'uppercase',
-          letterSpacing: '0.05em'
+          letterSpacing: '0.05em',
         }}
       >
         Skins
@@ -250,7 +250,7 @@ export default ({ properties }) => {
         mt={0}
         mb={4}
         wrap="wrap"
-        children={colorMetrics.map(metric => (
+        children={colorMetrics.map((metric) => (
           <Flex key={metric.name} sx={{ mb: 3, width: ['50%', '25%', '20%'] }}>
             <SlabStat
               title={metric.name}
@@ -267,7 +267,7 @@ export default ({ properties }) => {
           mb: 3,
           fontSize: 1,
           textTransform: 'uppercase',
-          letterSpacing: '0.05em'
+          letterSpacing: '0.05em',
         }}
       >
         Typography
@@ -276,7 +276,7 @@ export default ({ properties }) => {
         <Flex
           mt={0}
           wrap="wrap"
-          children={typographyMetrics.map(metric => (
+          children={typographyMetrics.map((metric) => (
             <Flex
               key={metric.name}
               sx={{ mb: 3, width: ['50%', '25%', '20%'] }}
@@ -296,7 +296,7 @@ export default ({ properties }) => {
           mb: 3,
           fontSize: 1,
           textTransform: 'uppercase',
-          letterSpacing: '0.05em'
+          letterSpacing: '0.05em',
         }}
       >
         Borders
@@ -305,7 +305,7 @@ export default ({ properties }) => {
         <Flex
           mt={0}
           wrap="wrap"
-          children={borderMetrics.map(metric => (
+          children={borderMetrics.map((metric) => (
             <Flex
               key={metric.name}
               sx={{ mb: 3, width: ['50%', '25%', '20%'] }}

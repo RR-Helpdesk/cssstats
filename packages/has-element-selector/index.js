@@ -8,10 +8,10 @@ module.exports = function hasElementSelector(selector) {
   }
 
   return parse(selector)
-    .nodes.reduce(function(a, b) {
+    .nodes.reduce(function (a, b) {
       return a.concat(b.nodes)
     }, [])
-    .reduce(function(a, b) {
+    .reduce(function (a, b) {
       if (b.type === 'element') {
         return true
       }

@@ -10,7 +10,7 @@ export default ({ zIndexes = [] }) => (
       description={`${zIndexes.length} total`}
     />
 
-    {uniq(zIndexes).map(zIndex => (
+    {uniq(zIndexes).map((zIndex) => (
       <Text
         key={zIndex}
         mb={3}

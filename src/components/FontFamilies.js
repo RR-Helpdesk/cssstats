@@ -11,7 +11,7 @@ export default ({ fontFamilies = [] }) => (
       description={`${fontFamilies.length} total`}
     />
 
-    {uniq(fontFamilies).map(fontFamily => (
+    {uniq(fontFamilies).map((fontFamily) => (
       <div
         key={fontFamily}
         sx={{ borderBottom: '1px solid', borderColor: 'gray', py: 4 }}

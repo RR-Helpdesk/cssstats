@@ -11,15 +11,15 @@ export default ({ data }) => {
     'margin-left',
     'margin-right',
     'margin-top',
-    'margin-bottom'
+    'margin-bottom',
   ]
 
   const formattedData = [
     properties.map((p, i) => ({ x: p, y: (data.properties[p] || []).length })),
     properties.map((p, i) => ({
       x: p,
-      y: uniq(data.properties[p] || []).length
-    }))
+      y: uniq(data.properties[p] || []).length,
+    })),
   ]
 
   return (

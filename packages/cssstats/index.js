@@ -22,7 +22,7 @@ module.exports = function (src, opts) {
     repeatedSelectors: false,
     propertyResets: false,
     vendorPrefixedProperties: false,
-    preserveCustomProperties: false
+    preserveCustomProperties: false,
   })
 
   function parse(root, result) {
@@ -34,7 +34,7 @@ module.exports = function (src, opts) {
     }
 
     const parser = postcss()
-    plugins.forEach(plugin => parser.use(plugin))
+    plugins.forEach((plugin) => parser.use(plugin))
 
     var string = parser.process(root).css
     stats.size = size(string)

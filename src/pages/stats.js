@@ -90,7 +90,8 @@ export default () => {
       <SubHeader title={url} description={pageTitle} mb={5} />
       <Flex>
         <div
-          sx={{ bg: 'lightGray', color: 'darkGray', borderRadius: '7px', p: 4 }}
+    sx={{ bg: 'lightGray', color: 'darkGray',       fontFamily: 'heading',
+      textTransform: 'uppercase', borderRadius: '7px', p: 4 }}
         >
           <Flex>
             <dl
@@ -122,7 +123,6 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textTransform: 'uppercase',
                     letterSpacing: '0.05em',
                     fontSize: 0,
                     textAlign: 'left',
@@ -132,7 +132,6 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textTransform: 'uppercase',
                     letterSpacing: '0.05em',
                     fontSize: 0,
                     textAlign: 'right',
@@ -144,7 +143,6 @@ export default () => {
                   sx={{
                     borderBottom: '1px solid',
                     borderColor: 'gray',
-                    textTransform: 'uppercase',
                     letterSpacing: '0.05em',
                     fontSize: 0,
                     textAlign: 'right',
@@ -345,6 +343,8 @@ export default () => {
           borderRadius: '7px',
           bg: 'darkGray',
           color: 'lightGray',
+          fontFamily: 'heading',
+          textTransform: 'uppercase',
         }}
       >
         <SummaryStats

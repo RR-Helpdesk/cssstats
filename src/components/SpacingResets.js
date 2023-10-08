@@ -15,7 +15,7 @@ export default ({ properties }) => {
     'padding-top',
     'padding-left',
     'padding-right',
-    'padding-bottom'
+    'padding-bottom',
   ]
 
   return (
@@ -27,9 +27,9 @@ export default ({ properties }) => {
 
       <Flex
         wrap="wrap"
-        children={spacingProperties.map(prop => {
+        children={spacingProperties.map((prop) => {
           const props = properties[prop] || []
-          const resets = props.filter(v => v === '0')
+          const resets = props.filter((v) => v === '0')
 
           return (
             <SlabStat

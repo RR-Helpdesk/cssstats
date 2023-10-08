@@ -13,15 +13,15 @@ export default ({ data }) => {
     'line-height',
     'text-align',
     'text-decoration',
-    'letter-spacing'
+    'letter-spacing',
   ]
 
   const formattedData = [
     properties.map((p, i) => ({ x: p, y: (data.properties[p] || []).length })),
     properties.map((p, i) => ({
       x: p,
-      y: uniq(data.properties[p] || []).length
-    }))
+      y: uniq(data.properties[p] || []).length,
+    })),
   ]
 
   return (

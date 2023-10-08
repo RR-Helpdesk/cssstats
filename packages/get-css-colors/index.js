@@ -4,7 +4,7 @@ const rgbRegex = require('rgb-regex')
 const hslaRegex = require('hsla-regex')
 const hslRegex = require('hsl-regex')
 
-module.exports = string => {
+module.exports = (string) => {
   if (typeof string !== 'string') {
     throw new TypeError('get-css-colors expected a string')
   }

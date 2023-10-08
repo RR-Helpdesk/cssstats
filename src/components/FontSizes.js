@@ -12,7 +12,7 @@ export default ({ fontSizes = [] }) => (
       description={`${uniq(fontSizes).length} Unique font sizes`}
     />
 
-    {sort(uniq(fontSizes)).map(fontSize => (
+    {sort(uniq(fontSizes)).map((fontSize) => (
       <div sx={{ borderBottom: '1px solid', borderColor: 'gray', py: 3 }}>
         <Text fontSize={1} mb={0} fontWeight={500}>
           {fontSize}
@@ -33,16 +33,16 @@ export default ({ fontSizes = [] }) => (
       style={{
         overflowX: 'auto',
         WebkitOverflowScrolling: 'touch',
-        paddingBottom: 16
+        paddingBottom: 16,
       }}
     >
       <table cellSpacing="0" cellPadding="0">
         <tr>
-          {sort(fontSizes).map(fontSize => (
+          {sort(fontSizes).map((fontSize) => (
             <td
               key={fontSize}
               style={{
-                fontSize
+                fontSize,
               }}
               sx={{
                 textAlign: 'center',
@@ -53,14 +53,14 @@ export default ({ fontSizes = [] }) => (
                 pb: 2,
                 borderLeft: '1px solid',
                 borderBottom: '1px solid',
-                borderColor: 'gray'
+                borderColor: 'gray',
               }}
               children="A"
             />
           ))}
         </tr>
         <tr>
-          {sort(fontSizes).map(fontSize => (
+          {sort(fontSizes).map((fontSize) => (
             <td
               key={fontSize}
               style={{
@@ -72,7 +72,7 @@ export default ({ fontSizes = [] }) => (
                 paddingRight: 4,
                 paddingTop: 4,
                 borderLeft: '1px solid',
-                borderColor: 'gray'
+                borderColor: 'gray',
               }}
               children={fontSize}
             />

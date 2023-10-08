@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = cssFilePath => {
+module.exports = (cssFilePath) => {
   if (typeof cssFilePath !== 'string') {
     throw new TypeError('is-css expected a string')
   }

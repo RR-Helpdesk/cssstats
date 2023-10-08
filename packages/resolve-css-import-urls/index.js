@@ -13,7 +13,7 @@ module.exports = (url, css) => {
     )
   }
 
-  const cssUrls = getImports(css).map(importStatement => {
+  const cssUrls = getImports(css).map((importStatement) => {
     // url('blah.css') => blah.css
     let cssRelativePath = getCssUrls(importStatement)
 

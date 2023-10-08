@@ -15,13 +15,13 @@ export default ({ backgroundColors = [] }) => (
       wrap="wrap"
       mb={[4, 5]}
       justify="space-between"
-      children={uniq(backgroundColors).map(bg => (
+      children={uniq(backgroundColors).map((bg) => (
         <div
           key={bg}
           sx={{
             p: 2,
             mb: 2,
-            width: ['25%', '25%', '15%']
+            width: ['25%', '25%', '15%'],
           }}
         >
           <BackgroundColor color={bg} />
@@ -36,15 +36,15 @@ export default ({ backgroundColors = [] }) => (
       style={{
         display: 'table',
         tableLayout: 'fixed',
-        width: '100%'
+        width: '100%',
       }}
-      children={backgroundColors.map(bg => (
+      children={backgroundColors.map((bg) => (
         <div
           key={bg}
           sx={{
             display: 'table-cell',
             bg: bg,
-            height: '64px'
+            height: '64px',
           }}
         ></div>
       ))}
@@ -54,15 +54,15 @@ export default ({ backgroundColors = [] }) => (
       style={{
         display: 'table',
         tableLayout: 'fixed',
-        width: '100%'
+        width: '100%',
       }}
-      children={backgroundColors.sort().map(bg => (
+      children={backgroundColors.sort().map((bg) => (
         <div
           key={bg}
           sx={{
             display: 'table-cell',
             bg: bg,
-            height: '64px'
+            height: '64px',
           }}
         ></div>
       ))}

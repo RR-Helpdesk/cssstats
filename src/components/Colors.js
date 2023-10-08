@@ -6,7 +6,9 @@ import { Div, Flex, Color, SectionTitle } from './library'
 
 export default ({ colors = [] }) => (
   <Div>
-    <h2 id="colors" sx={{ fontSize: 5 }}>Colors</h2>
+    <h2 id="colors" sx={{ fontSize: 5 }}>
+      Colors
+    </h2>
     <SectionTitle
       title={`${uniq(colors).length} unique colors`}
       description="Printed by declaration order in source code"
@@ -14,7 +16,7 @@ export default ({ colors = [] }) => (
     <Flex
       wrap="wrap"
       mb={5}
-      children={uniq(colors).map(color => (
+      children={uniq(colors).map((color) => (
         <Div key={color} mb={2} width={[2 / 5, 1 / 3, 1 / 8]}>
           <Color color={color} />
         </Div>

@@ -7,7 +7,7 @@ import { H2, Flex, GiantSlabStat } from './library'
 export default ({ rules, selectors, declarations, properties }) => (
   <div
     sx={{
-      mt: 3
+      mt: 3,
       //p: 4,
       //borderRadius: '7px',
       //bg: '#1d1d1d',

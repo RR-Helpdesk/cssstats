@@ -10,7 +10,7 @@ export default ({ showLabel = false }) => {
 
   return (
     <form
-      onSubmit={e => {
+      onSubmit={(e) => {
         e.preventDefault()
         navigate(`/stats?url=${encodeURIComponent(url)}`)
       }}
@@ -22,7 +22,7 @@ export default ({ showLabel = false }) => {
         placeholder="google.com"
         inputMode="url"
         value={url}
-        onChange={e => setUrl(e.target.value)}
+        onChange={(e) => setUrl(e.target.value)}
         sx={{ color: 'text' }}
       />
     </form>

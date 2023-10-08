@@ -7,7 +7,7 @@ const isPresent = require('is-present')
 const normalizeUrl = require('normalize-url')
 const cssbeautify = require('cssbeautify')
 
-const isValidUrl = url => isPresent(url) && isUrl(url)
+const isValidUrl = (url) => isPresent(url) && isUrl(url)
 
 const cssApi = async (req, res) => {
   const url = getParam('url', req.url)
@@ -17,7 +17,7 @@ const cssApi = async (req, res) => {
   if (!isValidUrl(fullUrl)) {
     return send(res, 406, {
       error: 'unacceptable',
-      message: 'Url is invalid'
+      message: 'Url is invalid',
     })
   }
 
@@ -31,7 +31,7 @@ const cssApi = async (req, res) => {
     send(res, 500, {
       error: 'server_error',
       message: 'Something went wrong',
-      stack: e
+      stack: e,
     })
   }
 }

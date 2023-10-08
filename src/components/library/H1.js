@@ -8,12 +8,13 @@ const H1 = styled('h1')(
   fontSize,
   width,
   color,
-  borderColor
+  borderColor,
 )
 
 H1.defaultProps = {
   borderColor: 'transparent',
-  color: 'black'
+  color: 'primary',
+  textTransform: 'uppercase',
 }
 
 export default H1

@@ -1,30 +1,54 @@
+import "@fontsource/khand"
+import "@fontsource/sarabun"
+import "@fontsource/courier-prime"
+import "@fontsource/barlow"
+
 export default {
   fonts: {
-    body: '-apple-system, BlinkMacSystemFont, sans-serif',
-    heading: '-apple-system, BlinkMacSystemFont, sans-serif',
+    body: '"Sarabun", Sarabun, "Open Sans", sans-serif',
+    heading: '"Khand", Khand, Georgia, sans-serif',
+    title: '"Barlow", Barlow, "Open Sans", sans-serif',
+    monospace: '"Courier Prime", "Courier Prime", "Open Sans", sans-serif',
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72, 96],
   initialColorMode: 'light',
+  fontWeights: {
+    body: 300,
+    heading: 700,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
   colors: {
-    black: '#000',
-    text: '#000',
-    blue: '#33e',
-    darkGray: '#333',
-    gray: '#ccc',
-    lightGray: '#eee',
-    chart: ['#222', '#999'],
-    background: '#fff',
+    primary: '#1c447f',
+    secondary: '#5b8aa0',
+    black: '#1c447f',
+    text: '#1c447f',
+    boxtext: '#fafafa',
+    blue: '#5B8aa0',
+    darkGray: '#1c447f',
+    gray: '#5B8aa0',
+    lightGray: '#b2d3de',
+    chart: ['#5B8AA0', '#b2d3de'],
+    boxbackground: '#5E688D',
+    background: '#fafafa',
     modes: {
       dark: {
-        black: '#fff',
-        text: '#fff',
-        blue: '#3ee',
-        lightGray: '#333',
-        gray: '#444',
-        darkGray: '#eee',
-        chart: ['#666', '#eee'],
-        background: '#000',
+        primary: '#fafafa',
+        secondary: '#5b8aa0',
+        black: '#fafafa',
+        text: '#fafafa',
+        boxtext: '#1c447f',
+        blue: '#b2d3de',
+        lightGray: '#fafafa',
+        gray: '#5B8aa0',
+        darkGray: '#5B8AA0',
+        chart: ['#5B8AA0', '#b2d3de'],
+        boxbackground: '#fafafa',
+        background: '#1c447f',
       },
     },
   },
@@ -33,10 +57,13 @@ export default {
       fontFamily: 'body',
     },
     a: {
+      fontFamily: 'heading',
+      textTransform: 'uppercase',
       textDecoration: 'none',
       color: 'blue',
     },
     p: {
+      fontFamily: 'body',
       fontSize: 3,
       lineHeight: 1.5,
       maxWidth: 800,
@@ -73,9 +100,12 @@ export default {
     },
     textStyles: {
       caps: {
+        color: 'primary',
+        fontFamily: 'heading',
         textTransform: 'uppercase',
         letterSpacing: '0.05em',
       },
     },
   },
 }
+  
